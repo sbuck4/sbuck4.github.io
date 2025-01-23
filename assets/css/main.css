@@ -1581,7 +1581,7 @@ input, select, textarea {
 				width: auto;
 			}
 		
-		/* Tab Styles */
+	/* Tab Styles */
 		.tabs {
 			display: flex;
 			justify-content: space-around;
@@ -1618,12 +1618,12 @@ input, select, textarea {
 			font-size: 16px;
 			color: #333;
 		}
-		/* Tabs Header */
+	/* Tabs Header */
 		.tabs {
     		display: flex;
-    		justify-content: flex-start;
-    		gap: 10px;
-    		margin-bottom: 15px;
+    		justify-content: space-around;
+    		margin-top: 20px ;
+    		margin-bottom: 20px;
 		}
 
 		.tab-button {
@@ -1632,7 +1632,7 @@ input, select, textarea {
     		border: 1px solid #ccc;
     		border-radius: 5px;
     		cursor: pointer;
-    		font-size: 16px;
+    		font-size: 14px;
     		transition: background-color 0.3s;
 		}
 
@@ -1645,7 +1645,7 @@ input, select, textarea {
     		background-color: #ddd;
 		}
 
-		/* Tab Content */
+	/* Tab Content */
 		.tab-content {
     		display: none;
 		}
@@ -1654,13 +1654,13 @@ input, select, textarea {
     		display: block;
 		}
 	
-		/* Container for tooltips */
+	/* Container for tooltips */
 		.tooltip-container {
     		position: relative;
    		 	display: inline-block;
 		}
 
-		/* Tooltip styling */
+	/* Tooltip styling */
 		.tooltip {
    		 	position: absolute;
    			bottom: 10px; /* Adjust to position the bar */
@@ -1678,7 +1678,7 @@ input, select, textarea {
     		z-index: 10; /* Ensure it stays on top */
 		}
 
-		/* Show the tooltip when hovering */
+	/* Show the tooltip when hovering */
 		.tooltip-container:hover .tooltip {
     		opacity: 1;
     		visibility: visible;
