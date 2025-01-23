@@ -1580,7 +1580,45 @@ input, select, textarea {
 				margin: 0 auto;
 				width: auto;
 			}
-	/* Tabs Header */
+		
+		/* Tab Styles */
+		.tabs {
+			display: flex;
+			justify-content: space-around;
+			margin-bottom: 20px;
+		}
+		
+		.tab-button {
+			padding: 10px 20px;
+			background-color: #f0f0f0;
+			border: 1px solid #ccc;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+		
+		.tab-button:hover {
+			background-color: #e0e0e0;
+		}
+		
+		.tab-button.active {
+			background-color: #007bff;
+			color: white;
+		}
+		
+		.tab-content {
+			display: none;
+		}
+		
+		.tab-content.active {
+			display: block;
+		}
+		
+		.tab-content p {
+			padding: 20px;
+			font-size: 16px;
+			color: #333;
+		}
+		/* Tabs Header */
 		.tabs {
     		display: flex;
     		justify-content: flex-start;
@@ -1588,41 +1626,41 @@ input, select, textarea {
     		margin-bottom: 15px;
 		}
 
-	.tab-button {
-    	padding: 10px 15px;
-    	background-color: #f0f0f0;
-    	border: 1px solid #ccc;
-    	border-radius: 5px;
-    	cursor: pointer;
-    	font-size: 16px;
-    	transition: background-color 0.3s;
-	}
+		.tab-button {
+    		padding: 10px 15px;
+    		background-color: #f0f0f0;
+    		border: 1px solid #ccc;
+    		border-radius: 5px;
+    		cursor: pointer;
+    		font-size: 16px;
+    		transition: background-color 0.3s;
+		}
 
-	.tab-button.active {
-    	background-color: #333;
-    	color: white;
-	}
+		.tab-button.active {
+    		background-color: #333;
+    		color: white;
+		}
 
-	.tab-button:hover {
-    	background-color: #ddd;
-	}
+		.tab-button:hover {
+    		background-color: #ddd;
+		}
 
-	/* Tab Content */
-	.tab-content {
-    	display: none;
-	}
+		/* Tab Content */
+		.tab-content {
+    		display: none;
+		}
 
-	.tab-content.active {
-    	display: block;
-	}
+		.tab-content.active {
+    		display: block;
+		}
 	
-	/* Container for tooltips */
+		/* Container for tooltips */
 		.tooltip-container {
     		position: relative;
    		 	display: inline-block;
 		}
 
-	/* Tooltip styling */
+		/* Tooltip styling */
 		.tooltip {
    		 	position: absolute;
    			bottom: 10px; /* Adjust to position the bar */
@@ -1640,7 +1678,7 @@ input, select, textarea {
     		z-index: 10; /* Ensure it stays on top */
 		}
 
-	/* Show the tooltip when hovering */
+		/* Show the tooltip when hovering */
 		.tooltip-container:hover .tooltip {
     		opacity: 1;
     		visibility: visible;
