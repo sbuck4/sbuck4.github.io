@@ -1618,6 +1618,10 @@ input, select, textarea {
 			font-size: 16px;
 			color: #333;
 		}
+	/* Add this to add space between the title and tabs */
+		#work header {
+    		margin-bottom: 20px; /* Adds space between the title and the tabs */
+		}
 	/* Tabs Header */
 		.tabs {
     		display: flex;
@@ -1632,7 +1636,7 @@ input, select, textarea {
     		border: 1px solid #ccc;
     		border-radius: 5px;
     		cursor: pointer;
-    		font-size: 14px;
+    		font-size: 12px;
     		transition: background-color 0.3s;
 		}
 
