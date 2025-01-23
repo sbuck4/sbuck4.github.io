@@ -1584,7 +1584,7 @@ input, select, textarea {
 	/* Tab Styles */
 		.tabs {
 			display: flex;
-			justify-content: space-around;
+			justify-content: flex-start;
 			margin-bottom: 20px;
 		}
 		
