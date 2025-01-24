@@ -34,13 +34,18 @@
                     <header>
                         <h1>Spencer Buck</h1>
                         <p>Insurance Producer, Developer</p>
+                        <p>
+                            Hello, my name is Spencer Buck. I am 25 years old and a twin dad! I come from a strong customer service and sales background so I have a passion for helping people and solving problems.
+                        </p>
+                        <div id="additional-content" style="display: none;">
                             <p>
-                            Hello, my name is Spencer Buck. I am 25 years old and a twin dad! I come from a strong customer service and sales background so I have a passion for helping people and solving problems. 
-                            I would love to use that passion along with my drive to keep learning to fuel my career in tech, sales and business. 
-                            <br><br>
-                            In my free time I love to play soccer, video games and hangout with my boys. I also love to travel and experience new cultures when I can.
-                            </p>                       
-                        </header>
+                                I would love to use that passion along with my drive to keep learning to fuel my career in tech, sales, and business.
+                                <br><br>
+                                In my free time I love to play soccer, video games, and hang out with my boys. I also love to travel and experience new cultures when I can.
+                            </p>
+                        </div>
+                        <button id="expand-button" onclick="toggleContent()">Expand</button>
+                    </header>
                     <a href="#work" class="jumplink pic">
                         <span class="arrow icon solid fa-chevron-right"><span>See my work</span></span>
                         <img src="images/me.jpg" alt="" />                      
@@ -116,24 +121,18 @@
         <script src="assets/js/main.js"></script>
 
         <script>
-            
-			// Tab switching function
-            function showTab(tabName) {
-                // Hide all tabs
-                var tabs = document.querySelectorAll('.tab-content');
-                tabs.forEach(function(tab) {
-                    tab.classList.remove('active');
-                });
-
-                // Deactivate all buttons
-                var buttons = document.querySelectorAll('.tab-button');
-                buttons.forEach(function(button) {
-                    button.classList.remove('active');
-                });
-
-                // Activate the selected tab and button
-                document.getElementById(tabName).classList.add('active');
-                document.querySelector('.tab-button[onclick="showTab(\'' + tabName + '\')"]').classList.add('active');
+            // Toggle visibility of additional content
+            function toggleContent() {
+                var content = document.getElementById("additional-content");
+                var button = document.getElementById("expand-button");
+                
+                if (content.style.display === "none") {
+                    content.style.display = "block";
+                    button.textContent = "Collapse";
+                } else {
+                    content.style.display = "none";
+                    button.textContent = "Expand";
+                }
             }
         </script>
 
