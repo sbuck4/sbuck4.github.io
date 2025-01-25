@@ -35,23 +35,20 @@
                         <h1>Spencer Buck</h1>
                         <p>Insurance Producer, Developer</p>
                         <p>
-                            Hello, my name is Spencer Buck. I am 25 years old and a twin dad! I come from a strong customer service and sales background so I have a passion for helping people and solving problems.
+                            Hello, my name is Spencer Buck. I am 25 years old and a twin dad! I come from a strong customer service and sales background, so I have a passion for helping people and solving problems. 
+                            <span id="additional-content" style="display: none; max-height: 100px; overflow-y: auto; font-size: 0.9em; line-height: 1.4; margin-top: 10px; border: 1px solid #ccc; padding: 10px; border-radius: 5px; display: block;">
+                                I would love to use that passion along with my drive to keep learning to fuel my career in tech, sales, and business. In my free time, I love to play soccer, video games, and hang out with my boys. I also love to travel and experience new cultures when I can.
+                            </span>
                         </p>
-                        <div id="additional-content" style="display: none;">
-                            <p>
-                                I would love to use that passion along with my drive to keep learning to fuel my career in tech, sales, and business.
-                                <br><br>
-                                In my free time I love to play soccer, video games, and hang out with my boys. I also love to travel and experience new cultures when I can.
-                            </p>
-                        </div>
-                        <button id="expand-button" onclick="toggleContent()">Expand</button>
+                        <button id="expand-button" onclick="toggleContent()" style="margin-top: 10px; padding: 5px 10px; font-size: 0.9em; border: none; border-radius: 5px; background-color: #007bff; color: white; cursor: pointer;">
+                            Expand
+                        </button>
                     </header>
                     <a href="#work" class="jumplink pic">
                         <span class="arrow icon solid fa-chevron-right"><span>See my work</span></span>
-                        <img src="images/me.jpg" alt="" />                      
+                        <img src="images/me.jpg" alt="" />
                     </a>
                 </article>
-
                 <!-- Work -->
                 <article id="work" class="panel">
                     <header>
@@ -125,7 +122,7 @@
             function toggleContent() {
                 var content = document.getElementById("additional-content");
                 var button = document.getElementById("expand-button");
-                
+        
                 if (content.style.display === "none") {
                     content.style.display = "block";
                     button.textContent = "Collapse";
