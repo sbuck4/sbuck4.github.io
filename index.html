@@ -30,16 +30,39 @@
             <div id="main">
 
                 <!-- Me -->
-                <article id="home" class="panel intro">
-                    <header>
-                        <h1>Spencer Buck</h1>
-                        <p>Insurance Producer, Developer</p>
-                    </header>
-                    <a href="#work" class="jumplink pic">
-                        <span class="arrow icon solid fa-chevron-right"><span>See my work</span></span>
-                        <img src="images/me.jpg" alt="" />
-                    </a>
-                </article>
+                <article id="home" class="panel intro" style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+    <header style="max-width: 80%; margin: 0 auto;">
+        <h1>Spencer Buck</h1>
+        <p style="font-size: 1.1em; font-weight: bold;">Insurance Producer, Developer</p> <!-- Title adjusted to be larger -->
+        <p>
+            <span id="additional-content" style="max-height: 300px; overflow-y: auto; font-size: 0.8em; line-height: 1.4; margin-top: 10px; border: 1px solid rgba(0, 0, 0, 0.2); padding: 10px; border-radius: 5px; background-color: rgba(255, 255, 255, 0.7); box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); scrollbar-width: thin; scrollbar-color: rgba(100, 100, 100, 0.5) transparent;">
+                Hello, my name is Spencer Buck. I am 25 years old and a twin dad! I come from a strong customer service and sales background, so I have a passion for helping people and solving problems.
+                I would love to use that passion along with my drive to keep learning to fuel my career in tech, sales, and business. In my free time, I love to play soccer, video games, and hang out with my boys. I also love to travel and experience new cultures when I can.
+            </span>
+        </p>
+    </header>
+    <a href="#work" class="jumplink pic" style="margin-top: 20px;">
+        <span class="arrow icon solid fa-chevron-right"><span>See my work</span></span>
+        <img src="images/me.jpg" alt="" style="border-radius: 50%; max-width: 150px;" />
+    </a>
+</article>
+
+<!-- Custom Scrollbar Styling -->
+<style>
+    #additional-content::-webkit-scrollbar {
+        width: 8px;
+    }
+    #additional-content::-webkit-scrollbar-thumb {
+        background-color: rgba(100, 100, 100, 0.5);
+        border-radius: 4px;
+    }
+    #additional-content::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(100, 100, 100, 0.7);
+    }
+    #additional-content::-webkit-scrollbar-track {
+        background: transparent;
+    }
+</style>
                 <!-- Work -->
                 <article id="work" class="panel">
                     <header>
@@ -109,20 +132,6 @@
         <script src="assets/js/main.js"></script>
 
         <script>
-            // Toggle visibility of additional content
-            function toggleContent() {
-                var content = document.getElementById("additional-content");
-                var button = document.getElementById("expand-button");
-        
-                if (content.style.display === "none") {
-                    content.style.display = "block";
-                    button.textContent = "Collapse";
-                } else {
-                    content.style.display = "none";
-                    button.textContent = "Expand";
-                }
-            }
-        </script>
 
     </body>
 </html>
