@@ -2199,26 +2199,27 @@ input, select, textarea {
 					}
 					
 					#main > .panel.intro header h1 {
-						font-size: 2.4em;  /* Original size */
+						font-size: 2.0em;  /* Original size */
 						line-height: 1.25em;
 						margin-bottom: 0;
 					}
 					
 					#main > .panel.intro header p:first-of-type {
 						letter-spacing: -0.015em;
-						font-size: 1.6em;  /* 2 sizes smaller */
+						font-size: 1.2em;  /* 2 sizes smaller */
 						font-style: italic;
 						margin: 0.25em 0 0 0;
 					}
 					
 					#additional-content {
-						font-size: 1.2em;  /* 2 sizes smaller than title text */
-						max-height: 300px;
+						font-size: 1.0em;  /* 2 sizes smaller than title text */
+						max-height: 200px;
+						width: 80%;
 						overflow-y: auto;
 						scrollbar-width: thin;
 						scrollbar-color: rgba(100, 100, 100, 0.3) transparent;
 						line-height: 1.4;
-						margin-top: 10px;
+						margin-top: 20px;
 					}
 					
 					#additional-content::-webkit-scrollbar {
