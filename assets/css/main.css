@@ -2212,7 +2212,7 @@ input, select, textarea {
 					}
 					
 					#additional-content {
-						font-size: 0.8em;  /* 2 sizes smaller than title text */
+						font-size: 1em;  /* 2 sizes smaller than title text */
 						max-height: 200px;
 						width: 100%;
 						overflow-y: auto;
