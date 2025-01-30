@@ -2212,9 +2212,9 @@ input, select, textarea {
 					}
 					
 					#additional-content {
-						font-size: 1.0em;  /* 2 sizes smaller than title text */
+						font-size: 0.08em;  /* 2 sizes smaller than title text */
 						max-height: 200px;
-						width: 80%;
+						width: 100%;
 						overflow-y: auto;
 						scrollbar-width: thin;
 						scrollbar-color: rgba(100, 100, 100, 0.3) transparent;
