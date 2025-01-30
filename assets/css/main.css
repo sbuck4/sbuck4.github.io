@@ -2221,7 +2221,7 @@ input, select, textarea {
 						line-height: 1.5;
 						top: 500px;
 						margin: 0 auto;
-						
+						padding: 15px; 
 					}
 					
 					#additional-content::-webkit-scrollbar {
