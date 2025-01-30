@@ -2218,8 +2218,8 @@ input, select, textarea {
 						overflow-y: auto;
 						scrollbar-width: thin;
 						scrollbar-color: rgba(100, 100, 100, 0.3) transparent;
-						line-height: 1.4;
-						margin-top: 40px;
+						line-height: 1.5;
+						margin-top: 80px auto 20px auto;
 						margin: 0 auto;
 						
 					}
