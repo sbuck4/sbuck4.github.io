@@ -2268,7 +2268,7 @@ input, select, textarea {
 					position: fixed;
 					top: 50%;
 					left: 50%;
-					transform: translate(-50%, -50%) scale(2); /* Enlarges the image */
+					transform: translate(-50%, -50%); /* Enlarges the image */
 					max-width: 80vw;
 					max-height: 80vh;
 					z-index: 1000;
