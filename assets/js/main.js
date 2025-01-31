@@ -201,5 +201,32 @@
 		}, 250);
 
 	});
+	
+	// Image Expand/Collapse Functionality
+	$(document).ready(function () {
+		var $overlay = $('<div id="overlay"></div>'); // Create overlay dynamically
+		$('body').append($overlay); // Add overlay to the body
+
+		$('.expandable').on('click', function () {
+			var $this = $(this);
+
+			if ($this.hasClass('expanded')) {
+				// Shrink image back to normal
+				$this.removeClass('expanded');
+				$overlay.fadeOut();
+			} else {
+				// Expand the image
+				$this.addClass('expanded');
+				$overlay.fadeIn();
+			}
+		});
+
+		// Clicking on the overlay should close the expanded image
+		$overlay.on('click', function () {
+			$('.expandable.expanded').removeClass('expanded');
+			$overlay.fadeOut();
+		});
+	});
+
 
 })(jQuery);
