@@ -209,33 +209,63 @@
 
     // Image Expand/Collapse Functionality
     $(document).ready(function () {
-
-        // When an image with the 'expandable' class is clicked
-        $('.expandable').on('click', function (event) {
-			event.preventDefault();  // Prevent the default click behavior
-			event.stopPropagation(); // Prevent the event from bubbling up
+		var $overlay = $('<div id="overlay"></div>').appendTo('body').hide();
+	
+		$('.expandable').on('click', function (event) {
+			event.preventDefault();
+			event.stopPropagation();
 	
 			var $this = $(this);
 	
-			// If the image is already expanded, collapse it
 			if ($this.hasClass('expanded')) {
-				$this.removeClass('expanded');
-				$overlay.fadeOut(); // Hide the overlay
+				// Collapse the image
+				$this.removeClass('expanded').css({
+					position: $this.data('originalPosition'),
+					top: $this.data('originalTop'),
+					left: $this.data('originalLeft'),
+					width: $this.data('originalWidth'),
+					height: $this.data('originalHeight'),
+					transform: '',
+					zIndex: '',
+				});
+	
+				$overlay.fadeOut();
 			} else {
-				// Expand the image
-				$this.addClass('expanded');
-				$overlay.fadeIn(); // Show the overlay
+				// Store original properties
+				$this.data('originalPosition', $this.css('position'));
+				$this.data('originalTop', $this.offset().top);
+				$this.data('originalLeft', $this.offset().left);
+				$this.data('originalWidth', $this.width());
+				$this.data('originalHeight', $this.height());
+	
+				// Get viewport dimensions
+				var viewportWidth = $(window).width();
+				var viewportHeight = $(window).height();
+	
+				// Calculate new position for centering
+				var newLeft = (viewportWidth - $this.width() * 1.5) / 2;
+				var newTop = (viewportHeight - $this.height() * 1.5) / 2;
+	
+				// Expand the image and center it
+				$this.addClass('expanded').css({
+					position: 'fixed',
+					top: newTop,
+					left: newLeft,
+					width: $this.width() * 1.5,  // Adjust scale
+					height: $this.height() * 1.5,
+					transform: 'translate(0, 0)',
+					zIndex: 1000,
+				});
+	
+				$overlay.fadeIn();
 			}
 		});
 	
-		// Clicking on the overlay should collapse the image
+		// Clicking on the overlay closes the image
 		$overlay.on('click', function () {
-			// Remove the expanded class from any expanded images
-			$('.expandable.expanded').removeClass('expanded');
-			$(this).fadeOut(); // Hide the overlay
+			$('.expandable.expanded').trigger('click');
 		});
+
+	});	
 	
-    });
-
-
 })(jQuery);
