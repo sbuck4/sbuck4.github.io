@@ -2254,7 +2254,7 @@ input, select, textarea {
 						}
 
 						#main > .panel.intro header {
-							padding: 4em;
+							padding: 4em 0 0 0;
 							text-align: center;
 						}
 
@@ -2267,7 +2267,7 @@ input, select, textarea {
 					}
 
 					#main > .panel.intro header {
-						padding: 2.75em 2em 2.5em 2em;
+						padding: 2.75em 2em em 2em;
 					}
 
 						#main > .panel.intro header p {
