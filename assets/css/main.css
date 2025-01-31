@@ -2269,11 +2269,14 @@ input, select, textarea {
 					top: 50%;
 					left: 50%;
 					transform: translate(-50%, -50%); /* Enlarges the image */
-					max-width: 60vw;
-					max-height: 60vh;
+					max-width: 80vw;
+					max-height: 80vh;
+					width: auto; /* Maintain aspect ratio */
+    				height: auto; /* Maintain aspect ratio */
 					z-index: 1000;
 					border: 3px solid #fff;
 					box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+					image-rendering: smooth; /* Ensure smooth scaling */
 				}
 				
 				/* Background Overlay */
