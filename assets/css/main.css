@@ -2212,16 +2212,16 @@ input, select, textarea {
 					}
 					
 					#additional-content {
-						font-size: 1em;  /* 2 sizes smaller than title text */
+						font-size: 1em;
 						max-height: 200px;
 						width: 100%;
 						overflow-y: auto;
 						scrollbar-width: thin;
 						scrollbar-color: rgba(100, 100, 100, 0.3) transparent;
 						line-height: 1.5;
-						margin-top: 500px;
+						margin-top: 12px;  /* This moves it down by approximately 1/2 inch */
 						margin: 0 auto;
-						padding: 15px; 
+						padding: 15px;
 					}
 					
 					#additional-content::-webkit-scrollbar {
