@@ -201,13 +201,17 @@
 		}, 250);
 
 	});
-	
+
 	// Image Expand/Collapse Functionality
 	$(document).ready(function () {
 		var $overlay = $('<div id="overlay"></div>'); // Create overlay dynamically
 		$('body').append($overlay); // Add overlay to the body
 
-		$('.expandable').on('click', function () {
+		$('.expandable').on('click', function (event) {
+			// Prevent any default behavior (e.g., tab switching or link redirection)
+			event.preventDefault();
+			event.stopPropagation();
+			
 			var $this = $(this);
 
 			if ($this.hasClass('expanded')) {
@@ -225,6 +229,7 @@
 		$overlay.on('click', function () {
 			$('.expandable.expanded').removeClass('expanded');
 			$overlay.fadeOut();
+
 		});
 	});
 
