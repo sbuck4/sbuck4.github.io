@@ -212,29 +212,29 @@
 
         // When an image with the 'expandable' class is clicked
         $('.expandable').on('click', function (event) {
-            event.preventDefault();  // Prevent the default click behavior
-            event.stopPropagation(); // Prevent the event from bubbling up
-
-            var $this = $(this);
-
-            // If the image is already expanded, collapse it
-            if ($this.hasClass('expanded')) {
-                $this.removeClass('expanded');
-                $overlay.fadeOut(); // Hide the overlay
-            } else {
-                // Expand the image
-                $this.addClass('expanded');
-                $overlay.fadeIn(); // Show the overlay
-            }
-        });
-
-        // Clicking on the overlay should collapse the image
-        $overlay.on('click', function () {
-            // Remove the expanded class from any expanded images
-            $('.expandable.expanded').removeClass('expanded');
-            $(this).fadeOut(); // Hide the overlay
-        });
-
+			event.preventDefault();  // Prevent the default click behavior
+			event.stopPropagation(); // Prevent the event from bubbling up
+	
+			var $this = $(this);
+	
+			// If the image is already expanded, collapse it
+			if ($this.hasClass('expanded')) {
+				$this.removeClass('expanded');
+				$overlay.fadeOut(); // Hide the overlay
+			} else {
+				// Expand the image
+				$this.addClass('expanded');
+				$overlay.fadeIn(); // Show the overlay
+			}
+		});
+	
+		// Clicking on the overlay should collapse the image
+		$overlay.on('click', function () {
+			// Remove the expanded class from any expanded images
+			$('.expandable.expanded').removeClass('expanded');
+			$(this).fadeOut(); // Hide the overlay
+		});
+	
     });
 
 
