@@ -202,36 +202,40 @@
 
 	});
 
-	// Image Expand/Collapse Functionality
-	$(document).ready(function () {
-		var $overlay = $('<div id="overlay"></div>'); // Create overlay dynamically
-		$('body').append($overlay); // Add overlay to the body
+	var $window = $(window),
+        $body = $('body'),
+        $overlay = $('<div id="overlay"></div>'); // Dynamically create the overlay
+    $('body').append($overlay); // Add overlay to the body
 
-		$('.expandable').on('click', function (event) {
-			// Prevent any default behavior (e.g., tab switching or link redirection)
-			event.preventDefault();
-			event.stopPropagation();
-			
-			var $this = $(this);
+    // Image Expand/Collapse Functionality
+    $(document).ready(function () {
 
-			if ($this.hasClass('expanded')) {
-				// Shrink image back to normal
-				$this.removeClass('expanded');
-				$overlay.fadeOut();
-			} else {
-				// Expand the image
-				$this.addClass('expanded');
-				$overlay.fadeIn();
-			}
-		});
+        // When an image with the 'expandable' class is clicked
+        $('.expandable').on('click', function (event) {
+            event.preventDefault();  // Prevent the default click behavior
+            event.stopPropagation(); // Prevent the event from bubbling up
 
-		// Clicking on the overlay should close the expanded image
-		$overlay.on('click', function () {
-			$('.expandable.expanded').removeClass('expanded');
-			$overlay.fadeOut();
+            var $this = $(this);
 
-		});
-	});
+            // If the image is already expanded, collapse it
+            if ($this.hasClass('expanded')) {
+                $this.removeClass('expanded');
+                $overlay.fadeOut(); // Hide the overlay
+            } else {
+                // Expand the image
+                $this.addClass('expanded');
+                $overlay.fadeIn(); // Show the overlay
+            }
+        });
+
+        // Clicking on the overlay should collapse the image
+        $overlay.on('click', function () {
+            // Remove the expanded class from any expanded images
+            $('.expandable.expanded').removeClass('expanded');
+            $(this).fadeOut(); // Hide the overlay
+        });
+
+    });
 
 
 })(jQuery);
