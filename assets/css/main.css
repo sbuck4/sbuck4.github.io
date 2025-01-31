@@ -2208,7 +2208,7 @@ input, select, textarea {
 						letter-spacing: -0.015em;
 						font-size: 1.2em;  /* 2 sizes smaller */
 						font-style: italic;
-						margin: 0.25em 0 0 0;
+						margin: 20px;
 					}
 					
 					#additional-content {
