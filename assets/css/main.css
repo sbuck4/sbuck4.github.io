@@ -2219,7 +2219,7 @@ input, select, textarea {
 						scrollbar-width: thin;
 						scrollbar-color: rgba(100, 100, 100, 0.3) transparent;
 						line-height: 1.5;
-						top-top: 500px;
+						margin-top: 500px;
 						margin: 0 auto;
 						padding: 15px; 
 					}
