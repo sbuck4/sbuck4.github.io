@@ -1,121 +1,1537 @@
-<!DOCTYPE HTML>
-<!--
-    Astral by HTML5 UP
-    html5up.net | @ajlkn
-    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-    <head>
-        <title>Spencer Buck - Portfolio</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <link rel="stylesheet" href="assets/css/main.css" />
-        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-    </head>
-    <body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spencer Buck - Developer Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        <!-- Wrapper-->
-        <div id="wrapper">
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #8b5cf6;
+            --accent: #f59e0b;
+            --success: #10b981;
+            --text-primary: #111827;
+            --text-secondary: #6b7280;
+            --text-light: #9ca3af;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f9fafb;
+            --bg-dark: #111827;
+            --border: #e5e7eb;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-card: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+        }
 
-            <!-- Nav -->
-            <nav id="nav">
-                <a href="#" class="icon solid fa-home"><span>Home</span></a>
-                <a href="#work" class="icon solid fa-folder"><span>Work</span></a>             
-                <a href="https://www.linkedin.com/in/spencer-buck/" class="icon brands fa-linkedin"><span>LinkedIn</span></a>
-                <a href="https://github.com/sbuck4" class="icon brands fa-github"><span>GitHub</span></a>
-                <a href="https://x.com/AlgoBuck" class="icon brands fa-twitter"><span>Twitter</span></a>
-            </nav>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            overflow-x: hidden;
+        }
 
-            <!-- Main -->
-            <div id="main">
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
 
-                <!-- Me -->
-                <article id="home" class="panel intro">
-                    <header>
-                        <h1>Spencer Buck</h1>
-                        <p>Insurance Producer, Developer</p>
-                        <div id="additional-content">
-                            Hello, my name is Spencer Buck. I am 25 years old and a twin dad! I come from a strong customer service and sales background, so I have a passion for helping people and solving problems.
-                            I would love to use that passion along with my drive to keep learning to fuel my career in tech, sales, and business. In my free time, I love to play soccer, video games, and hang out with my boys. I also love to travel and experience new cultures when I can.
-                        </div>
-                    </header>
-                    <a href="#work" class="jumplink pic">
-                        <span class="arrow icon solid fa-chevron-right"><span>See my work</span></span>
-                        <img src="images/me.jpg" alt="Spencer Buck" />
-                    </a>
-                </article>
+        /* Loading Animation */
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
 
-                <!-- Work -->
-                <article id="work" class="panel">
-                    <header>
-                        <h2>Projects</h2>                    
-                    </header>
-                    <p>
-                        Here are some of my projects emphasizing my skills in Python (scikit-learn, numpy, pandas, tensorflow) and SQL. 
-                        I have also used HTML, CSS, and JavaScript to create this website!
-                    </p>
-                    <section>
-                        <div class="row">
-                            <div class="col-4 col-6-medium col-12-small tooltip-container">
-                                <a href="#" class="image fit">
-                                    <img src="images/cryptocluster.jpg" alt="K-means cluster plot" class="expandable">
-                                    <div class="tooltip">K-means cluster plot</div>
-                                </a>
-                            </div>
-                            <div class="col-4 col-6-medium col-12-small tooltip-container">
-                                <a href="#" class="image fit">
-                                    <img src="images/salesbot.jpg" alt="Custom sales bot" class="expandable">
-                                    <div class="tooltip">Custom sales bot</div>
-                                </a>
-                            </div>    
-                            <div class="col-4 col-6-medium col-12-small tooltip-container">
-                                <a href="#" class="image fit">
-                                    <img src="images/congresstrade.jpg" alt="Congress trade analysis" class="expandable">
-                                    <div class="tooltip">Congress trade analysis</div>
-                                </a>
-                            </div>
-                            <div class="col-4 col-6-medium col-12-small tooltip-container">
-                                <a href="#" class="image fit">
-                                    <img src="images/banking.jpg" alt="Simple bank account" class="expandable">
-                                    <div class="tooltip">Simple bank account</div>
-                                </a>
-                            </div>
-                            <div class="col-4 col-6-medium col-12-small tooltip-container">
-                                <a href="#" class="image fit">
-                                    <img src="images/victorvis1.jpg" alt="RandomForest Classifier" class="expandable">
-                                    <div class="tooltip">RandomForest Classifier</div>
-                                </a>
-                            </div>
-                            <div class="col-4 col-6-medium col-12-small tooltip-container">
-                                <a href="#" class="image fit">
-                                    <img src="images/victorvis2.jpg" alt="GRID.gg GraphQL queries" class="expandable">
-                                    <div class="tooltip">GRID.gg GraphQL queries</div>
-                                </a>
-                            </div>
-                        </div>
-                    </section>
-                </article>
+        .loading.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
 
-                <!-- Footer -->
-                <div id="footer">
-                    <ul class="copyright">
-                        <li>&copy; Spencer Buck 2024</li>
-                        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-                    </ul>
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid var(--border);
+            border-top: 3px solid var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            box-shadow: var(--shadow);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .logo:hover {
+            color: var(--primary-dark);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--primary);
+            border-radius: 1px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .social-links a {
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            padding: 0.5rem;
+            border-radius: 50%;
+        }
+
+        .social-links a:hover {
+            color: var(--primary);
+            background: var(--bg-secondary);
+            transform: translateY(-2px);
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            cursor: pointer;
+        }
+
+        /* Hero Section - Combined with About */
+        .hero {
+            min-height: 100vh;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding: 6rem 0;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+            align-items: center;
+            color: white;
+            width: 100%;
+        }
+
+        .hero-image {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image::before {
+            content: '';
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            z-index: 1;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-image img {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 400px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-xl);
+            transition: transform 0.3s ease;
+        }
+
+        .hero-image:hover img {
+            transform: translate(-10px, -10px);
+        }
+
+        .hero-text {
+            text-align: left;
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ffffff 0%, #e0e7ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 1s ease 0.5s both;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease 0.7s both;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.8;
+            line-height: 1.7;
+            animation: fadeInUp 1s ease 0.9s both;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            animation: fadeInUp 1s ease 1s both;
+            position: relative;
+            z-index: 1;
+        }
+
+        .skill-tag {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            backdrop-filter: blur(10px);
+        }
+
+        .skill-tag:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease 1.1s both;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.875rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #d97706;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Projects Section */
+        .projects {
+            padding: 5rem 0;
+            background: var(--bg-secondary);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .section-subtitle {
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            justify-items: stretch;
+        }
+
+        @media (max-width: 1200px) {
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .project-card {
+            background: var(--gradient-card);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 1px solid var(--border);
+            width: 100%;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .project-image {
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+            background: var(--bg-secondary);
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.1);
+        }
+
+        .project-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.9), rgba(139, 92, 246, 0.9));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+
+        .project-overlay i {
+            font-size: 3rem;
+            color: white;
+        }
+
+        .project-content {
+            padding: 2rem;
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--text-primary);
+        }
+
+        .project-description {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-tag {
+            background: var(--primary);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .project-link:hover {
+            color: var(--primary-dark);
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 3000;
+            backdrop-filter: blur(5px);
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal-content {
+            position: relative;
+            max-width: 90vw;
+            max-height: 90vh;
+            margin: 2rem;
+        }
+
+        .modal-image {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: var(--shadow-xl);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: -50px;
+            right: 0;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: white;
+            font-size: 2rem;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .modal-close:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        /* Contact Modal */
+        .contact-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 3000;
+            backdrop-filter: blur(5px);
+        }
+
+        .contact-modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: var(--shadow-xl);
+            position: relative;
+        }
+
+        .contact-form h3 {
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.875rem;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            font-family: inherit;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .contact-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: background 0.3s ease;
+        }
+
+        .contact-close:hover {
+            background: var(--bg-secondary);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-dark);
+            color: white;
+            padding: 3rem 0 2rem;
+            text-align: center;
+            position: relative;
+            z-index: 100;
+            overflow: hidden;
+        }
+
+        .footer-content {
+            margin-bottom: 2rem;
+        }
+
+        .footer-content h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .footer-content p {
+            color: #9ca3af;
+            margin-bottom: 2rem;
+        }
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            text-decoration: none;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 2rem;
+            color: #9ca3af;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 2rem 0;
+                box-shadow: var(--shadow);
+                transform: translateY(-100%);
+                transition: transform 0.3s ease;
+            }
+
+            .nav-links.active {
+                transform: translateY(0);
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                text-align: center;
+            }
+
+            .hero-text {
+                text-align: center;
+            }
+
+            .hero-image {
+                order: -1;
+            }
+
+            .hero-image img {
+                max-width: 300px;
+            }
+
+            .hero-description {
+                margin-bottom: 2rem;
+            }
+
+            .skills {
+                justify-content: center;
+                margin-bottom: 2.5rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 1rem;
+            }
+
+            .project-content {
+                padding: 1.5rem;
+            }
+
+            .hero-content {
+                padding: 0 1rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .slide-in-left {
+            animation: slideInLeft 0.6s ease forwards;
+        }
+
+        /* Scroll animations */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .scroll-animate.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Staggered animations for better flow */
+        .scroll-animate:nth-child(1) { transition-delay: 0.1s; }
+        .scroll-animate:nth-child(2) { transition-delay: 0.2s; }
+        .scroll-animate:nth-child(3) { transition-delay: 0.3s; }
+        .scroll-animate:nth-child(4) { transition-delay: 0.4s; }
+        .scroll-animate:nth-child(5) { transition-delay: 0.5s; }
+        .scroll-animate:nth-child(6) { transition-delay: 0.6s; }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-secondary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-dark);
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Header -->
+    <header id="header">
+        <nav class="container">
+            <a href="#home" class="logo">Spencer Buck</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+            </ul>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/spencer-buck/" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/sbuck4" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://x.com/AlgoBuck" target="_blank" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section with About -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-image">
+                    <img src="images/me.jpg" alt="Spencer Buck - Professional headshot">
                 </div>
-
+                <div class="hero-text">
+                    <h1 class="hero-title">Spencer Buck</h1>
+                    <p class="hero-subtitle">Business Intelligence Analyst & Developer</p>
+                    <p class="hero-description">
+                        Hello! I'm Spencer Buck, a 26-year-old twin dad with a passion for technology and helping others. 
+                        My journey has taken me from customer service and sales to the exciting world of software development.
+                        I believe in combining my strong people skills with technical expertise to create solutions that 
+                        truly make a difference.
+                    </p>
+                    <p class="hero-description">
+                        When I'm not coding, you'll find me playing soccer, gaming, or spending quality time with my boys. 
+                        I also love traveling and experiencing new cultures whenever possible.
+                    </p>
+                    <div class="skills">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Machine Learning</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Data Analysis</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">HTML/CSS</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">Scikit-learn</span>
+                        <span class="skill-tag">API Integration</span>
+                    </div>
+                    <div class="cta-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fas fa-rocket"></i>
+                            View My Work
+                        </a>
+                        <a href="#" onclick="openContactModal()" class="btn btn-secondary">
+                            <i class="fas fa-envelope"></i>
+                            Contact Me
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
 
-        <!-- Overlay for image expansion -->
-        <div id="overlay"></div>
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header scroll-animate">
+                <h2 class="section-title">My Projects</h2>
+                <p class="section-subtitle">
+                    Here are some of my favorite projects that showcase my skills in Python, machine learning, 
+                    data analysis, and web development.
+                </p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card scroll-animate" data-image="images/dataleader.jpg">
+                    <div class="project-image">
+                        <img src="images/dataleader.jpg" alt="Selenium web scraper automation">
+                        <div class="project-overlay">
+                            <i class="fas fa-expand-alt"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Selenium Web Scraper</h3>
+                        <p class="project-description">
+                            Automated web scraping solution using Selenium WebDriver to extract and process data from dynamic websites, 
+                            with robust error handling and data validation capabilities.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Selenium</span>
+                            <span class="project-tag">Web Scraping</span>
+                            <span class="project-tag">Automation</span>
+                            <span class="project-tag">Data Processing</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                                View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-        <!-- Scripts -->
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/browser.min.js"></script>
-        <script src="assets/js/breakpoints.min.js"></script>
-        <script src="assets/js/util.js"></script>
-        <script src="assets/js/main.js"></script>
+                <div class="project-card scroll-animate" data-image="images/seoscanner.jpg">
+                    <div class="project-image">
+                        <img src="images/seoscanner.jpg" alt="SEO analysis and scanning tool">
+                        <div class="project-overlay">
+                            <i class="fas fa-expand-alt"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">SEO Scanner Tool</h3>
+                        <p class="project-description">
+                            Comprehensive SEO analysis tool that scans websites for optimization opportunities, 
+                            analyzes meta tags, checks page speed, and provides actionable recommendations for improved search rankings.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Web Scraping</span>
+                            <span class="project-tag">SEO Analysis</span>
+                            <span class="project-tag">Data Visualization</span>
+                            <span class="project-tag">Automation</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/sbuck4/seo-scanner" class="project-link">
+                                <i class="fab fa-github"></i>
+                                View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-    </body>
+                <div class="project-card scroll-animate" data-image="images/censusexplorer.jpg">
+                    <div class="project-image">
+                        <img src="images/censusexplorer.jpg" alt="Census data exploration dashboard">
+                        <div class="project-overlay">
+                            <i class="fas fa-expand-alt"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Census Explorer</h3>
+                        <p class="project-description">
+                            Interactive data exploration platform for US Census data with dynamic filtering, 
+                            statistical analysis, and visualization tools for demographic and economic insights.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Data Analysis</span>
+                            <span class="project-tag">Pandas</span>
+                            <span class="project-tag">Data Visualization</span>
+                            <span class="project-tag">Census Data</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/sbuck4/Census-Explorer" class="project-link">
+                                <i class="fab fa-github"></i>
+                                View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card scroll-animate" data-image="images/cryptocluster.jpg">
+                    <div class="project-image">
+                        <img src="images/cryptocluster.jpg" alt="Cryptocurrency K-means clustering visualization">
+                        <div class="project-overlay">
+                            <i class="fas fa-expand-alt"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Cryptocurrency Clustering Analysis</h3>
+                        <p class="project-description">
+                            Advanced K-means clustering analysis of cryptocurrency market data to identify trading patterns 
+                            and group similar digital assets based on market behavior and volatility metrics.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Scikit-learn</span>
+                            <span class="project-tag">Pandas</span>
+                            <span class="project-tag">Data Visualization</span>
+                            <span class="project-tag">Machine Learning</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/sbuck4/CryptoClustering" class="project-link">
+                                <i class="fab fa-github"></i>
+                                View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card scroll-animate" data-image="images/salesbot.jpg">
+                    <div class="project-image">
+                        <img src="images/salesbot.jpg" alt="AI-powered sales automation bot interface">
+                        <div class="project-overlay">
+                            <i class="fas fa-expand-alt"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">AI Sales Assistant Bot</h3>
+                        <p class="project-description">
+                            Intelligent sales automation bot that handles customer interactions, provides personalized 
+                            product recommendations, and streamlines the sales process using natural language processing.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">NLP</span>
+                            <span class="project-tag">API Integration</span>
+                            <span class="project-tag">Automation</span>
+                            <span class="project-tag">Customer Service</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/sbuck4/StreamLitSalesBot" class="project-link">
+                                <i class="fab fa-github"></i>
+                                View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card scroll-animate" data-image="images/congresstrade.jpg">
+                    <div class="project-image">
+                        <img src="images/congresstrade.jpg" alt="Congressional trading analysis dashboard">
+                        <div class="project-overlay">
+                            <i class="fas fa-expand-alt"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Congressional Trading Analysis</h3>
+                        <p class="project-description">
+                            Comprehensive data analysis project examining congressional trading patterns, market performance 
+                            correlations, and transparency in political financial activities with interactive visualizations.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Data Analysis</span>
+                            <span class="project-tag">Matplotlib</span>
+                            <span class="project-tag">Financial Data</span>
+                            <span class="project-tag">Public Policy</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/tsjohns9/ai-project-1" class="project-link">
+                                <i class="fab fa-github"></i>
+                                View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card scroll-animate" data-image="images/banking.jpg">
+                    <div class="project-image">
+                        <img src="images/banking.jpg" alt="Banking system application interface">
+                        <div class="project-overlay">
+                            <i class="fas fa-expand-alt"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Secure Banking System</h3>
+                        <p class="project-description">
+                            Object-oriented banking application featuring account management, secure transactions, 
+                            user authentication, and comprehensive logging with modern security practices.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">OOP</span>
+                            <span class="project-tag">SQLite</span>
+                            <span class="project-tag">Security</span>
+                            <span class="project-tag">Banking</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/sbuck4/customer_banking" class="project-link">
+                                <i class="fab fa-github"></i>
+                                View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card scroll-animate" data-image="images/victorvis1.jpg">
+                    <div class="project-image">
+                        <img src="images/victorvis1.jpg" alt="RandomForest classifier performance visualization">
+                        <div class="project-overlay">
+                            <i class="fas fa-expand-alt"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">RandomForest Classification Model</h3>
+                        <p class="project-description">
+                            Advanced machine learning model using RandomForest algorithm for predictive analysis with 
+                            feature importance visualization, cross-validation, and hyperparameter tuning.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">RandomForest</span>
+                            <span class="project-tag">Scikit-learn</span>
+                            <span class="project-tag">Data Visualization</span>
+                            <span class="project-tag">Predictive Analytics</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/SikoticVinyl/VictorVis" class="project-link">
+                                <i class="fab fa-github"></i>
+                                View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card scroll-animate" data-image="images/victorvis2.jpg">
+                    <div class="project-image">
+                        <img src="images/victorvis2.jpg" alt="GRID.gg GraphQL API data visualization">
+                        <div class="project-overlay">
+                            <i class="fas fa-expand-alt"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Esports Data Analytics Platform</h3>
+                        <p class="project-description">
+                            Data extraction and analysis platform using GRID.gg GraphQL API for comprehensive esports 
+                            analytics, player performance tracking, and match prediction modeling.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">GraphQL</span>
+                            <span class="project-tag">API Integration</span>
+                            <span class="project-tag">Esports Analytics</span>
+                            <span class="project-tag">Data Mining</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/SikoticVinyl/VictorVis2.0" class="project-link">
+                                <i class="fab fa-github"></i>
+                                View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h3>Let's Connect</h3>
+                <p>Ready to collaborate or discuss opportunities? I'd love to hear from you!</p>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/spencer-buck/" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/sbuck4" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://x.com/AlgoBuck" target="_blank" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" onclick="openContactModal()" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Spencer Buck. Designed with passion and built with modern web technologies.</p>
+            </div>
+        </div>
+    </footer>
+
+<!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <img id="modalImage" class="modal-image" src="" alt="">
+        </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="contact-modal">
+        <form class="contact-form" id="contactForm">
+            <button type="button" class="contact-close" onclick="closeContactModal()" aria-label="Close">&times;</button>
+            <h3>Let's Connect!</h3>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required placeholder="Tell me about your project or how we can work together..."></textarea>
+            </div>
+            <div class="form-buttons">
+                <button type="submit" class="btn btn-primary">Send Message</button>
+                <button type="button" class="btn btn-secondary" onclick="closeContactModal()">Cancel</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Loading screen
+        window.addEventListener('load', () => {
+            const loading = document.getElementById('loading');
+            setTimeout(() => {
+                loading.classList.add('hidden');
+            }, 1000);
+        });
+
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Active navigation link
+        const navLinksElements = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('section');
+
+        function setActiveLink() {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinksElements.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', setActiveLink);
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerHeight = header.offsetHeight;
+                    const targetPosition = target.offsetTop - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+
+                    // Close mobile menu if open
+                    navLinks.classList.remove('active');
+                    const icon = menuToggle.querySelector('i');
+                    icon.classList.add('fa-bars');
+                    icon.classList.remove('fa-times');
+                }
+            });
+        });
+
+        // Image modal functionality
+        const projectCards = document.querySelectorAll('.project-card');
+        const modal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        const modalClose = document.querySelector('.modal-close');
+
+        projectCards.forEach(card => {
+            card.addEventListener('click', (e) => {
+                // Don't open modal if clicking on a link
+                if (e.target.closest('.project-link')) {
+                    return;
+                }
+                
+                const imageSrc = card.dataset.image;
+                const imageAlt = card.querySelector('.project-title').textContent;
+                
+                modalImage.src = imageSrc;
+                modalImage.alt = imageAlt;
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Close modal functions
+        function closeModal() {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        modalClose.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+
+        // Contact Modal Functions
+        function openContactModal() {
+            const modal = document.getElementById('contactModal');
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeContactModal() {
+            const modal = document.getElementById('contactModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Create mailto link with form data
+            const mailtoLink = `mailto:spencer.buck4@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+            
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            // Close modal and reset form
+            closeContactModal();
+            this.reset();
+        });
+
+        // Close contact modal when clicking outside
+        document.getElementById('contactModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeContactModal();
+            }
+        });
+
+        // Contact modal close button
+        document.querySelector('.contact-close').addEventListener('click', closeContactModal);
+
+        // ESC key to close both modals
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                // Close image modal
+                const imageModal = document.getElementById('imageModal');
+                if (imageModal.classList.contains('active')) {
+                    closeModal();
+                }
+                // Close contact modal
+                const contactModal = document.getElementById('contactModal');
+                if (contactModal.classList.contains('active')) {
+                    closeContactModal();
+                }
+            }
+        });
+
+        // Scroll animations with improved observer
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Add a small delay to ensure smooth animation
+                    setTimeout(() => {
+                        entry.target.classList.add('animated');
+                    }, 100);
+                }
+            });
+        }, observerOptions);
+
+        // Observe all scroll-animate elements
+        document.querySelectorAll('.scroll-animate').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Add loading animation to buttons
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                if (this.href && this.href.includes('#')) {
+                    return; // Don't add loading for anchor links
+                }
+                
+                const ripple = document.createElement('span');
+                ripple.classList.add('ripple');
+                this.appendChild(ripple);
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            });
+        });
+
+        // Dynamic year in footer
+        const currentYear = new Date().getFullYear();
+        document.querySelector('.footer-bottom p').innerHTML = 
+            `&copy; ${currentYear} Spencer Buck. Designed with passion and built with modern web technologies.`;
+
+        // Add hover effect to skill tags
+        document.querySelectorAll('.skill-tag').forEach(tag => {
+            tag.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-2px) scale(1.05)';
+            });
+            
+            tag.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Performance optimization: Debounce scroll events
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        // Apply debounce to scroll events
+        window.addEventListener('scroll', debounce(() => {
+            setActiveLink();
+        }, 10));
+
+        // Add entrance animations with staggered delays
+        document.addEventListener('DOMContentLoaded', () => {
+            const projectCards = document.querySelectorAll('.project-card');
+            projectCards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.1}s`;
+            });
+        });
+    </script>
+</body>
 </html>
