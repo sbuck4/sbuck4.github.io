@@ -8,7 +8,7 @@ config.js
 keys.js
 
 # Email service configuration
-config.js
+# config.js
 
 # IDE and editor files
 .vscode/
