@@ -4,11 +4,10 @@
 .env.development.local
 .env.test.local
 .env.production.local
-config.js
 keys.js
 
 # Email service configuration
-# config.js
+#config.js
 
 # IDE and editor files
 .vscode/
